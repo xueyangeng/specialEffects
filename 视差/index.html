@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html:charset=UTF-8" />
+    <!-- 定义浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>视差</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="./index.css"></link>
+  <script src="./index.js"></script>
+  <body translate="no">
+    <div id="hero">
+    <div class="layer-bg layer" data-depth="0.10" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="layer-1 layer" data-depth="0.20" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="layer-2 layer" data-depth="0.50" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="layer-3 layer" data-depth="0.80" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="layer-overlay layer" data-depth="0.85" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="layer-4 layer" data-depth="1.00" data-type="parallax" style="transform: translate3d(0px, 0px, 0px);"></div>
+  </div>
+  <div id="content"></div>
+ </body>
+</html>

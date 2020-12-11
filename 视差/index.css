@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #130d0a;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+#hero {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+}
+
+.layer-bg {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg');
+}
+.layer-1 {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png');
+  background-position: left bottom;
+}
+.layer-2 {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png');
+}
+.layer-3 {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png');
+  background-position: right bottom;
+}
+.layer-4 {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png');
+}
+.layer-overlay {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png');
+}
+
+#content {
+  background-color: #130d0a;
+  height: 200px;
+}
