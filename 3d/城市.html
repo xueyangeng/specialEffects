@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>城市</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <style>
+      body {
+        background-color: #222222;
+        margin: 0;
+      }
+      #box {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box"></div>
+    <script type="text/javascript">
+      window.onload = (event) => {
+        TDS_RT.loadProgram(
+          'https://techbrood.com/stone/templates/city.tsp?0.1',
+          'box'
+        );
+      };
+    </script>
+    <script src="./static/tds_rt.js"></script>
+  </body>
+</html>
