@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle 273px at 9.7% 50.7%,
+    rgba(255, 197, 217, 1) 0%,
+    rgba(247, 153, 186, 1) 90%
+  );
+}
+.icecream {
+  width: 150px;
+  height: 290px;
+  position: relative;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.3), 0 0 10px rgba(100, 63, 73, 0.7);
+  background: #6b3e26;
+}
+.icecream:before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 70%;
+  border-radius: 8px;
+  position: absolute;
+  left: 11px;
+  top: 24%;
+  box-shadow: 0 0 2px inset rgba(255, 255, 255, 0.3);
+  background: #875840;
+}
+.circle {
+  width: 15px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 74%;
+  top: 11%;
+  transform: rotate(-25deg);
+  box-shadow: 0 0 3px inset rgba(255, 255, 255, 0.6);
+  background: #875840;
+}
+.drip,
+.dripw,
+.drop {
+  width: 16px;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  background: #875840;
+}
+.drip {
+  height: 5px;
+  top: 98%;
+  left: 16%;
+  animation: animation-drip 10s linear;
+}
+.dripw {
+  height: 54px;
+  top: 98%;
+  left: 36%;
+  animation: animation-dripw 12s linear;
+}
+.drop {
+  height: 54px;
+  top: 98%;
+  left: 70%;
+  animation: animation-drop 8s linear;
+}
+@keyframes animation-drop {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 51px;
+  }
+}
+@keyframes animation-drip {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 32px;
+  }
+}
+@keyframes animation-dripw {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 32px;
+  }
+}
+.stick {
+  width: 32px;
+  height: 95px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: absolute;
+  top: 99.98%;
+  left: 40%;
+  z-index: -1;
+  box-shadow: 0 2px 8px inset rgba(0, 0, 0, 0.5);
+  background: #eca168;
+}
