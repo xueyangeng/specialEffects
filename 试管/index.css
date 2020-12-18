@@ -1,0 +1,167 @@
+:root {
+  --background-color: #333642;
+}
+body {
+  background: var(--background-color);
+}
+.box-canvas {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 600px;
+  height: 600px;
+  background: var(--background-color);
+}
+/* Smaller container - potentially to add in a rack later */
+
+.rack-frame {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+}
+.tube1 {
+  --liquid-color: #002df9;
+  --liquid-height: 50%;
+  left: 25px;
+}
+.tube2 {
+  --liquid-color: #f950b6;
+  --liquid-height: 20%;
+  left: 90px;
+}
+.tube3 {
+  --liquid-color: #03bd3a;
+  --liquid-height: 40%;
+  left: 160px;
+}
+.tube4 {
+  --liquid-color: #f76b21;
+  --liquid-height: 70%;
+  left: 230px;
+}
+.test-tube {
+  position: absolute;
+  top: -25px;
+  height: 150px;
+  width: 40px;
+  border-radius: 0 0 30% 30%;
+  background: linear-gradient(
+    to top,
+    var(--liquid-color),
+    var(--liquid-color) var(--liquid-height),
+    transparent var(--liquid-height),
+    transparent
+  );
+}
+/* Gradient to create tube shape */
+
+.test-tube::before {
+  content: '';
+  position: absolute;
+  height: 150px;
+  width: 40px;
+  border-radius: 0 0 30% 30%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.6)
+  );
+}
+/* Circle at top of test tube */
+
+.test-tube::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.6);
+}
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: bubbleUp 2s infinite;
+  width: 10px;
+  height: 10px;
+}
+.tube1 .bubble {
+  bottom: 10px;
+  left: 5px;
+}
+.tube2 .bubble {
+  bottom: 5px;
+  left: 15px;
+  animation-delay: 0.5s;
+}
+.tube3 .bubble {
+  bottom: 20px;
+  right: 5px;
+}
+.tube4 .bubble {
+  bottom: 10px;
+  left: 15px;
+  animation-delay: 0.75s;
+}
+.bubble::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: bubbleUp 2s infinite;
+}
+.tube1 .bubble::before {
+  left: 10px;
+  top: -10px;
+}
+.tube2 .bubble::before {
+  left: -10px;
+  top: -10px;
+  animation-delay: 0.5s;
+}
+.tube3 .bubble::before {
+  right: 10px;
+  top: 10px;
+}
+.tube4 .bubble::before {
+  animation-delay: 0.75s;
+}
+.bubble::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: bubbleUp 2s infinite;
+}
+.tube1 .bubble::after {
+  left: 20px;
+  top: -15px;
+}
+.tube2 .bubble::after {
+  animation-delay: 0.5s;
+}
+.tube3 .bubble::after {
+  right: 20px;
+  top: -5px;
+}
+.tube4 .bubble::after {
+  animation-delay: 0.75s;
+}
+@keyframes bubbleUp {
+  100% {
+    transform: translateY(-50px);
+    background: transparent;
+  }
+}
