@@ -1,0 +1,45 @@
+html {
+  overflow: hidden;
+  -ms-touch-action: none;
+  -ms-content-zooming: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+#screen {
+  position: absolute;
+  background: #111;
+  width: 100%;
+  height: 100%;
+}
+#screen img {
+  position: absolute;
+}
+#robot-1 {
+  position: fixed;
+  left: 20%;
+  top: 0px;
+}
+#robot-2 {
+  position: fixed;
+  left: 20%;
+  bottom: 0px;
+}
+#robot-3 {
+  position: fixed;
+  left: 80%;
+  top: 0px;
+}
+#robot-4 {
+  position: fixed;
+  left: 80%;
+  bottom: 0px;
+}
+.search {
+  background: #0065cb !important;
+}
