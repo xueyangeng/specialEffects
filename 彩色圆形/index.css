@@ -1,0 +1,41 @@
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  --tan: 0.087;
+  --m: 3;
+}
+div {
+  grid-area: 1/1;
+}
+
+.dot {
+  display: grid;
+  place-self: center;
+  transform: rotate(calc(var(--k) * 1turn)) translate(calc(0.5em / var(--tan)));
+}
+
+@keyframes a {
+  to {
+    transform: scale(0);
+  }
+}
+.lyr {
+  --t: calc((1 + var(--c)) * 1s);
+  padding: 0.5em;
+  border-radius: 50%;
+  background: hsl(calc(var(--c) / var(--m) * 360), 100%, 50%);
+  mix-blend-mode: screen;
+  animation: a var(--t) ease-in-out calc(var(--k) * -2 * var(--t)) infinite
+    alternate;
+}
+.lyr:nth-child(1) {
+  --c: 0;
+}
+.lyr:nth-child(2) {
+  --c: 1;
+}
+.lyr:nth-child(3) {
+  --c: 2;
+}
